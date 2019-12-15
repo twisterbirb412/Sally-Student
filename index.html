@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sally Student Resume</title>
+</head>
+<body>
+    <div id="application-root"></div>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script type="text/babel">
+
+    //use semantic HTML through the page - header, main, section, address
+    //include a section for Sally's education
+    //there should be at least 2 entries, each with company name, job title, dates of employment, short description
+    //As a stretch, write some mobile-first CSS styles
+    //second stretch would be to use a prop to confrol the student's name that's being Rendered
+
+
+
+
+
+    // Our code will go here
+    function Resume(props) {
+      console.log()
+  return (
+    <div>
+      <header>
+      <div class="Nameline">
+        {props.children}
+        <p> Web Developer. Design Specialist. Creative puzzlemaster.</p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2> Education </h2>
+          <h3>B.S. Computer Science</h3>
+          <li>Ball State University</li>
+          <li>Muncie, IN</li>
+          <li>2014-2019</li>
+      </section>
+      <section>
+        <h2>Employment History</h2>
+          <h3> Computer Lab Assistant </h3>
+            <li> Letterman Building, Ball State University</li>
+            <li>Muncie, IN</li>
+            <li>Aug. 2016- May 2019</li>
+            <li>Assisted students visiting the unveristy lab with CS assignemtents, etc. </li>
+          <h3> Server </h3>
+            <li> Chilis Bar and Grill</li>
+            <li>Muncie, IN</li>
+            <li>Aug. 2014- Dec. 2016</li>
+            <li> Provided a fun and fantastic dining experience for Muncie's finest.</li>
+        </section>
+        <section>
+          <h2> Contact Info </h2> 
+              <p> Sally Student </p>
+              <address>
+                <a href="mailto:sstudent@domain.com">sstudent@domain.com</a>
+                <a href="tel:+3175551234"> (317).555.1234</a>
+              </address> 
+                <img
+                src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg"
+                alt = "Photo of Sally Student"
+                height="250"
+                width="150"/>
+        </section>
+    </main>
+    </div>
+  );
+}
+
+
+// Nested elements inside the App
+ReactDOM.render(
+  <Resume>
+    <h1>Sally Student</h1>
+  </Resume>,
+  document.querySelector('#application-root')
+);
+
+    </script>
+</body>
+</html>
